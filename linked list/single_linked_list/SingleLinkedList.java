@@ -18,14 +18,14 @@ public class SingleLinkedList {
         return head;
     }
 
-    public void insertElement(int nodeValue, int location) {
+    public void insertInLinkedList(int nodeValue, int location) {
         Node node = new Node();
         node.value = nodeValue;
         if (head == null) {
             createSingleLinkedList(nodeValue);
             return;
         } else if (location == 0) {
-            node.value = nodeValue;
+            node.next = head;
             head = node;
         } else if (location >= size) {
             node.next = null;
@@ -45,4 +45,27 @@ public class SingleLinkedList {
         }
         size++;
     }
+
+    public void traversingInSingleLinkedList() {
+
+        if (head == null) {
+            System.out.println("Single LinkedList doesn't exist");
+        } else {
+            Node tempNode = head;
+
+            for (int i = 0; i < size; i++) {
+
+                System.out.print(tempNode.value);
+
+                if (i != size - 1) {
+                    System.out.print(" -> ");
+
+                }
+                tempNode = tempNode.next;
+            }
+        }
+        System.out.println();
+
+    }
+
 }

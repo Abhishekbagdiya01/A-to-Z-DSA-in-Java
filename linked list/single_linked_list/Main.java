@@ -1,11 +1,11 @@
 public class Main {
     public static void main(String[] args) {
         SingleLinkedList sll = new SingleLinkedList();
+        sll.createSingleLinkedList(2);
+        sll.insertInLinkedList(4, 1);
+        sll.insertInLinkedList(8, 0);
 
-        sll.insertElement(34, 1);
-        System.out.println(sll.head.value);
-        sll.insertElement(334, 3);
-        System.out.println(sll.head.next.value);
-
+        sll.insertInLinkedList(80, 5);
+        sll.traversingInSingleLinkedList();
     }
 }
