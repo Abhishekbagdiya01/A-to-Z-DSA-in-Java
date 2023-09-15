@@ -68,4 +68,20 @@ public class SingleLinkedList {
 
     }
 
+    public boolean searchingElementInSingleLinkedList(int nodeValue) {
+        if (head != null) {
+            Node tempNode = head;
+            for (int i = 0; i < size; i++) {
+                if (tempNode.value == nodeValue) {
+                    System.out.println(nodeValue + " found at location " + i);
+                    return true;
+                }
+                tempNode = tempNode.next;
+            }
+        }
+
+        System.out.println(nodeValue + "is not found in Single linked list");
+        return false;
+    }
+
 }
