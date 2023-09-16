@@ -7,8 +7,10 @@ public class Main {
 
         sll.insertInLinkedList(80, 5);
         sll.traversingInSingleLinkedList();
+        // sll.deleteNode(5);
 
-        sll.searchingElementInSingleLinkedList(4);
+        sll.traversingInSingleLinkedList();
+        // sll.searchingElementInSingleLinkedList(4);
     }
 
 }
