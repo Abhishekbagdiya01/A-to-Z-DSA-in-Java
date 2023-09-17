@@ -116,5 +116,12 @@ public class SingleLinkedList {
             size--;
 
         }
+
+    }
+
+    public void deleteSLL() {
+        head = null;
+        tail = null;
+        System.out.println("Single LinkedList deleted successful");
     }
 }
