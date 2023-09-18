@@ -3,10 +3,12 @@
 This repository contains my solutions to a variety of data structure and algorithm problems in Java. I am learning DSA and I am using this repository to track my progress and share my solutions with others.
 
 ## Topics
-* Loop Patterns
+* Star Patterns
 * Basic Recursion
 * Arrays  
-* Linked Lists 
+* Linked Lists
+    * Singly Linked Lists
+    * Circular Singly Linked Lists 
 
 ## How to use this repository
 
