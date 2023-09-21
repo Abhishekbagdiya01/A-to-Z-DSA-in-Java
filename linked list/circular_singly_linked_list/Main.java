@@ -9,7 +9,8 @@ public class Main {
         csll.insertionInCSLL(8, 3);
         csll.insertionInCSLL(10, 4);
         System.out.println("Size is : " + csll.size);
-        System.out.println(csll.head.value);
+
         csll.traversalInCSLL();
+        csll.SearchingInCSLL(12);
     }
 }

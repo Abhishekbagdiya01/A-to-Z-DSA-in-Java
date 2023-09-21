@@ -40,7 +40,7 @@ public class CircularSinglyLinkedList {
 
         } else {
             Node tempNode = head;
-            System.out.println(head.value);
+
             int index = 0;
             while (index < location - 1) {
                 tempNode = tempNode.next;
@@ -53,6 +53,7 @@ public class CircularSinglyLinkedList {
         size++;
     }
 
+    // Traversal in Circular Singly LinkedList
     public void traversalInCSLL() {
         if (head != null) {
             Node tempNode = head;
@@ -67,5 +68,22 @@ public class CircularSinglyLinkedList {
         } else {
             System.out.println("Circular Singly LinkedList doesn't exist");
         }
+        System.out.println();
+    }
+
+    // Searching in Circular Singly LinkedList
+    public boolean SearchingInCSLL(int nodeValue) {
+        if (head != null) {
+            Node tempNode = head;
+            for (int i = 0; i < size; i++) {
+                if (tempNode.value == nodeValue) {
+                    System.out.println(nodeValue + " Found at location : " + i);
+                    return true;
+                }
+                tempNode = tempNode.next;
+            }
+        }
+        System.out.println(nodeValue + " doesn't found at any node ");
+        return false;
     }
 }
