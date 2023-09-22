@@ -6,9 +6,10 @@ This repository contains my solutions to a variety of data structure and algorit
 * Star Patterns
 * Basic Recursion
 * Arrays  
-* Linked Lists
-    * Singly Linked Lists
-    * Circular Singly Linked Lists 
+* Linked List
+    * Singly Linked List
+    * Circular Singly Linked List
+    * Doubly Linked List
 
 ## How to use this repository
 
