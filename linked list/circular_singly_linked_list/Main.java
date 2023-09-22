@@ -12,5 +12,8 @@ public class Main {
 
         csll.traversalInCSLL();
         csll.SearchingInCSLL(12);
+        csll.deleteNodeInCSLL(0);
+        csll.traversalInCSLL();
+        csll.deleteCSLL();
     }
 }

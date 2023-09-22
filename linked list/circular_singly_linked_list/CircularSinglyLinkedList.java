@@ -86,4 +86,56 @@ public class CircularSinglyLinkedList {
         System.out.println(nodeValue + " doesn't found at any node ");
         return false;
     }
+
+    // Deleting node in Circular Singly LinkedList
+    public void deleteNodeInCSLL(int location) {
+        if (head == null) {
+            System.out.println("Circular Singly LinkedList doesn't exist !");
+            return;
+        } else if (location == 0) {
+            head = head.next;
+            tail = head;
+            size--;
+            if (size == 0) {
+                head.next = null;
+                head = null;
+                tail = null;
+            }
+        } else if (location >= size) {
+            Node tempNode = head;
+            for (int i = 0; i < size - 1; i++) {
+                tempNode = tempNode.next;
+            }
+            if (tempNode == head) {
+                head.next = null;
+                head = null;
+                tail = null;
+                size--;
+                return;
+            }
+            tempNode.next = head;
+            tail = tempNode;
+            size--;
+        } else {
+            Node tempNode = head;
+            for (int i = 0; i < location - 1; i++) {
+                tempNode = tempNode.next;
+            }
+            tempNode.next = tempNode.next.next;
+            size--;
+        }
+
+    }
+
+    // Deleting the whole Circular Singly LinkedList
+    public void deleteCSLL() {
+        if (head == null) {
+            System.out.println("Circular Singly LinkedList doesn't exist  ");
+        }
+        head = null;
+        tail.next = null;
+        tail = null;
+        size = 0;
+        System.out.println("Circular Singly LinkedList has been deleted !");
+    }
 }
