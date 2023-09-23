@@ -57,6 +57,24 @@ public class DoublyLinkedList {
                 tempNode = tempNode.next;
             }
             System.out.println();
+        } else {
+            System.out.println("Doubly LinkedList doesn't exist");
+        }
+    }
+
+    public void reverseTraversalInDLL() {
+        if (head != null) {
+            Node tempNode = tail;
+            for (int i = 0; i < size; i++) {
+                System.out.print(tempNode.value);
+                if (i < size - 1) {
+                    System.out.print("<-");
+                }
+                tempNode = tempNode.prev;
+            }
+            System.out.println();
+        } else {
+            System.out.println("Doubly LinkedList doesn't exist");
         }
     }
 }

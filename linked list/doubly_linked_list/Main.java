@@ -9,5 +9,6 @@ public class Main {
         dll.insertNodeInDLL(15, 4);
         // System.out.println(dll.head.next.value);
         dll.traversalInDLL();
+        dll.reverseTraversalInDLL();
     }
 }
