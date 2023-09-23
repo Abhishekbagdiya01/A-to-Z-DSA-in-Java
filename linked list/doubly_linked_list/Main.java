@@ -6,6 +6,8 @@ public class Main {
         // System.out.println(dll.head.value);
         dll.insertNodeInDLL(2, 0);
         dll.insertNodeInDLL(12, 3);
-        System.out.println(dll.head.next.value);
+        dll.insertNodeInDLL(15, 4);
+        // System.out.println(dll.head.next.value);
+        dll.traversalInDLL();
     }
 }
