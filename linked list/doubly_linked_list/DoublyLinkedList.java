@@ -98,7 +98,6 @@ public class DoublyLinkedList {
     public void deleteNodeInDLL(int location) {
         if (head == null) {
             System.out.println("Doubly LinkedList doesn't exist");
-            return;
         } else if (location == 0) {
 
             head = head.next;
@@ -128,5 +127,19 @@ public class DoublyLinkedList {
             size--;
         }
 
+    }
+
+    public void deleteDll() {
+        if (head != null) {
+
+            Node tempNode = head;
+            for (int i = 0; i < size; i++) {
+                tempNode.prev = null;
+                tempNode = tempNode.next;
+            }
+            head = null;
+            tail = null;
+            System.out.println("Doubly LinkedList deleted!");
+        }
     }
 }

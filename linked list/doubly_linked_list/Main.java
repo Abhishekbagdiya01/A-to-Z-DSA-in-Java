@@ -14,6 +14,9 @@ public class Main {
         dll.deleteNodeInDLL(2);
 
         dll.traversalInDLL();
+        dll.deleteDll();
+
+        dll.traversalInDLL();
 
     }
 }
