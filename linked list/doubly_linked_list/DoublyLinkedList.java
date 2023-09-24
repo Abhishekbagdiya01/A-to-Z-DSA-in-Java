@@ -94,4 +94,39 @@ public class DoublyLinkedList {
         System.out.println(nodeValue + " doesn't found at any node ");
         return false;
     }
+
+    public void deleteNodeInDLL(int location) {
+        if (head == null) {
+            System.out.println("Doubly LinkedList doesn't exist");
+            return;
+        } else if (location == 0) {
+
+            head = head.next;
+            head.prev = null;
+            size--;
+            if (size == 0) {
+                head = null;
+                tail = null;
+            }
+        } else if (location >= size) {
+            Node tempNode = head;
+            for (int i = 0; i < size - 1; i++) {
+                tempNode = tempNode.next;
+            }
+
+            tail = tempNode.prev;
+            size--;
+
+        } else {
+            Node tempNode = head;
+            for (int i = 0; i < location - 1; i++) {
+                tempNode = tempNode.next;
+            }
+
+            tempNode.next = tempNode.next.next;
+            tempNode.next.prev = tempNode;
+            size--;
+        }
+
+    }
 }

@@ -5,11 +5,15 @@ public class Main {
         dll.createDLL(5);
         // System.out.println(dll.head.value);
         dll.insertNodeInDLL(2, 0);
-        dll.insertNodeInDLL(12, 3);
+        dll.insertNodeInDLL(12, 2);
         dll.insertNodeInDLL(15, 4);
         // System.out.println(dll.head.next.value);
         dll.traversalInDLL();
         dll.reverseTraversalInDLL();
         dll.searchNodeInDLL(15);
+        dll.deleteNodeInDLL(2);
+
+        dll.traversalInDLL();
+
     }
 }
