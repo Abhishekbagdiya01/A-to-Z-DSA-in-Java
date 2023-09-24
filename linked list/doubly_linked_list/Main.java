@@ -10,5 +10,6 @@ public class Main {
         // System.out.println(dll.head.next.value);
         dll.traversalInDLL();
         dll.reverseTraversalInDLL();
+        dll.searchNodeInDLL(15);
     }
 }
