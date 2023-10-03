@@ -17,7 +17,7 @@ public class CircularDoublyLinkedList {
             size = 1;
 
         } else {
-            System.out.println("Circular Single Linked List already exist");
+            System.out.println("Circular Doubly Linked List already exist");
         }
         return head;
     }
