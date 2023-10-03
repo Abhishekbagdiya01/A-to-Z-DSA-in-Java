@@ -3,6 +3,7 @@ public class DoublyLinkedList {
     public Node tail;
     public int size;
 
+    // Creation of DoublyLinkedList
     public Node createDLL(int nodeValue) {
         Node node = new Node();
         head = new Node();
@@ -15,7 +16,7 @@ public class DoublyLinkedList {
         return head;
     }
 
-    // Insertion method
+    // Insertion in DoublyLinkedList
     public void insertNodeInDLL(int nodeValue, int location) {
         Node node = new Node();
         node.value = nodeValue;
@@ -46,6 +47,7 @@ public class DoublyLinkedList {
         size++;
     }
 
+    // Traversal in DoublyLinkedList
     public void traversalInDLL() {
         if (head != null) {
             Node tempNode = head;
@@ -62,6 +64,7 @@ public class DoublyLinkedList {
         }
     }
 
+    // Reverse Traversal in DoublyLinkedList
     public void reverseTraversalInDLL() {
         if (head != null) {
             Node tempNode = tail;
@@ -78,6 +81,7 @@ public class DoublyLinkedList {
         }
     }
 
+    // Searching in DoublyLinkedList
     public boolean searchNodeInDLL(int nodeValue) {
         if (head != null) {
             Node tempNode = head;
@@ -95,6 +99,7 @@ public class DoublyLinkedList {
         return false;
     }
 
+    // Deletion in DoublyLinkedList
     public void deleteNodeInDLL(int location) {
         if (head == null) {
             System.out.println("Doubly LinkedList doesn't exist");
@@ -129,6 +134,7 @@ public class DoublyLinkedList {
 
     }
 
+    // Deletion of DoublyLinkedList
     public void deleteDll() {
         if (head != null) {
 
@@ -140,6 +146,8 @@ public class DoublyLinkedList {
             head = null;
             tail = null;
             System.out.println("Doubly LinkedList deleted!");
+        } else {
+            System.out.println("Circular Singly LinkedList doesn't exist  ");
         }
     }
 }
