@@ -61,4 +61,38 @@ public class CircularDoublyLinkedList {
         size++;
     }
 
+    // Traversal in Circular Doubly LinkedList
+    public void traversalInCDLL() {
+        if (head == null) {
+            System.out.println("Circular Doubly LinkedList doesn't exist");
+        } else {
+            Node tempNode = head;
+            for (int i = 0; i < size; i++) {
+                System.out.print(tempNode.value);
+                if (i < size - 1) {
+                    System.out.print("->");
+                    tempNode = tempNode.next;
+                }
+            }
+        }
+        System.out.println();
+    }
+
+    // Traversal in Circular Doubly LinkedList
+    public void reverseTraversalInCDLL() {
+        if (head == null) {
+            System.out.println("Circular Doubly LinkedList doesn't exist");
+        } else {
+            Node tempNode = tail;
+            for (int i = 0; i < size; i++) {
+                System.out.print(tempNode.value);
+                if (i < size - 1) {
+                    System.out.print("<-");
+                    tempNode = tempNode.prev;
+                }
+            }
+
+        }
+        System.out.println();
+    }
 }

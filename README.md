@@ -10,6 +10,7 @@ This repository contains my solutions to a variety of data structure and algorit
     * Singly Linked List
     * Circular Singly Linked List
     * Doubly Linked List
+    * Circular Doubly Linked List
 
 ## How to use this repository
 

@@ -7,6 +7,7 @@ public class Main {
         cDLL.insertInDCLL(78, 1);
         cDLL.insertInDCLL(5, 2);
 
-        System.out.println(cDLL.head.next.next.value);
+        cDLL.traversalInCDLL();
+        cDLL.reverseTraversalInCDLL();
     }
 }
