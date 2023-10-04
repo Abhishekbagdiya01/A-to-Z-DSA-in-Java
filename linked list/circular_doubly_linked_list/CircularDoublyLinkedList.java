@@ -33,17 +33,18 @@ public class CircularDoublyLinkedList {
             createCDLL(nodeValue);
             return;
         } else if (location == 0) {
-            node.prev = node;
+            node.prev = tail;
             node.next = head;
             head.prev = node;
-
             head = node;
             tail.next = head;
         } else if (location >= size) {
             node.prev = tail;
             node.next = head;
+
             tail.next = node;
             tail = node;
+            head.prev = tail;
 
         } else {
             Node tempNode = head;
