@@ -114,4 +114,49 @@ public class CircularDoublyLinkedList {
         }
         return false;
     }
+
+    // Deletion in Circular Doubly LinkedList
+    public void deleteInCDLL(int location) {
+        if (head == null) {
+            System.out.println("Circular Doubly LinkedList doesn't exist");
+        } else if (location == 0) {
+
+            head = head.next;
+            head.prev = tail;
+            size--;
+            if (size == 0) {
+                head = null;
+                tail.prev = null;
+                tail.next = null;
+                tail = null;
+            }
+
+        } else if (location >= size - 1) {
+
+            tail = tail.prev;
+            tail.next = head;
+            head.prev = tail;
+            size--;
+        } else {
+            Node tempNode = head;
+            for (int i = 0; i < location - 1; i++) {
+
+                tempNode = tempNode.next;
+
+            }
+
+            tempNode.next = tempNode.next.next;
+            tempNode.next.prev = tempNode;
+            size--;
+        }
+    }
+
+    public void deleteCDLL() {
+        if (head == null) {
+            System.out.println("Circular Doubly LinkedList doesn't exist");
+        } else {
+            head = head.prev = head.next = tail = tail.prev = tail.next = null;
+            System.out.println("Circular Doubly LinkedList deleted successfully");
+        }
+    }
 }
