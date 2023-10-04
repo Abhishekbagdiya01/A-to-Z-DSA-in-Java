@@ -95,4 +95,23 @@ public class CircularDoublyLinkedList {
         }
         System.out.println();
     }
+
+    // Searching in Circular Doubly LinkedList
+    public boolean searchingInCDLL(int nodeValue) {
+        if (head != null) {
+            Node tempNode = head;
+            for (int i = 0; i < size; i++) {
+                if (tempNode.value == nodeValue) {
+                    System.out.println(nodeValue + " founded at location " + i);
+                    return true;
+                }
+                tempNode = tempNode.next;
+            }
+            System.out.println(nodeValue + " couldn't find at any location ");
+
+        } else {
+            System.out.println("Circular Doubly LinkedList doesn't exist");
+        }
+        return false;
+    }
 }

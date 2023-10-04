@@ -9,5 +9,6 @@ public class Main {
 
         cDLL.traversalInCDLL();
         cDLL.reverseTraversalInCDLL();
+        cDLL.searchingInCDLL(5);
     }
 }
