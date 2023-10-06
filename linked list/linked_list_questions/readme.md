@@ -7,13 +7,11 @@ Write a method to remove duplicates from an unsorted linked list.
 
 Example
 
-      java
       linkedList = 1->2->1->3
       deleteDups(linkedList)
       //Output
       1->2->3
       
-
 
 
 <b>Conclusion</b>
