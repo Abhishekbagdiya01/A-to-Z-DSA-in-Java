@@ -18,7 +18,7 @@ Implement and algorithm to find the nth to last element of a singly linked list.
 Example
 
       linkedList = 1->2->3->4-5
-      deleteDups(linkedList, 2)
+      nthToLast(linkedList, 2)
       //Output
       4
 
