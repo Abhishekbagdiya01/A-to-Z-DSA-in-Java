@@ -13,12 +13,19 @@ public class LinkedList {
     }
 
     public void insertInLL(int nodeValue) {
-        Node node = new Node();
-        node.value = nodeValue;
-        tail.next = node;
-        tail = node;
-        size++;
+        if (head == null) {
+            createLL(nodeValue);
+            return;
+        }
 
+        else {
+            Node node = new Node();
+            node.value = nodeValue;
+            tail.next = node;
+            tail = node;
+            size++;
+
+        }
     }
 
     public void traversalInLL() {
