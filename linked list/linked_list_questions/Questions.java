@@ -8,7 +8,7 @@ public class Questions {
      */
 
     public void removeDuplicates(LinkedList ll) {
-        HashSet<Integer> hashSet = new HashSet();
+        HashSet<Integer> hashSet = new HashSet<Integer>();
         Node currentNode = ll.head;
         Node prevNode = null;
         while (currentNode != null) {
@@ -38,5 +38,28 @@ public class Questions {
         } else {
             System.out.println("IndexOutOfBoundsException");
         }
+    }
+
+    /*
+     * Q3. Partition
+     * Write code to partition a linked list around a value x, such that all nodes
+     * less than x come before all nodes greater than or equal to x
+     */
+    public LinkedList partition(LinkedList ll, int x) {
+        Node currentNode = ll.head;
+        ll.tail = currentNode;
+        while (currentNode != null) {
+            Node next = currentNode.next;
+            if (currentNode.value < x) {
+                currentNode.next = ll.head;
+                ll.head = currentNode;
+            } else {
+                ll.tail.next = currentNode;
+                ll.tail = currentNode;
+            }
+            currentNode = next;
+        }
+        ll.tail.next = null;
+        return ll;
     }
 }
