@@ -11,6 +11,7 @@ This repository contains my solutions to a variety of data structure and algorit
     * Circular Singly Linked List
     * Doubly Linked List
     * Circular Doubly Linked List
+* Tree
 
 ## How to use this repository
 
