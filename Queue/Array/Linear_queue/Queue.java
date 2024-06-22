@@ -18,7 +18,7 @@ public class Queue {
         }
     }
 
-    public void push(int value) {
+    public void enQueue(int value) {
         if (topOfQueue == queueArray.length - 1) {
             System.out.println("Queue is full");
         } else {
@@ -28,13 +28,13 @@ public class Queue {
         }
     }
 
-    public void pop() {
+    public void deQueue() {
         if (isEmpty()) {
             System.out.println("Queue is empty");
         } else {
             queueArray[startOfQueue] = 0;
             startOfQueue++;
-            System.out.println("Value is Popped");
+            System.out.println("Value is dequeued");
         }
     }
 

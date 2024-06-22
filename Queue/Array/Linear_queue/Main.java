@@ -3,13 +3,13 @@ public class Main {
         Queue queue = new Queue();
         queue.createQueue(5);
         System.out.println(queue.isEmpty());
-        queue.push(12);
-        queue.push(1212);
-        queue.push(54345);
+        queue.enQueue(12);
+        queue.enQueue(1212);
+        queue.enQueue(54345);
 
         queue.traversalInQueue();
-        queue.pop();
-        queue.pop();
+        queue.deQueue();
+        queue.deQueue();
         System.out.println("--------------------------------");
      
         // queue.deleteQueue();
