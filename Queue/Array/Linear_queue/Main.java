@@ -6,12 +6,14 @@ public class Main {
         queue.enQueue(12);
         queue.enQueue(1212);
         queue.enQueue(54345);
-
+        queue.enQueue(54345);
+        queue.enQueue(54345);
+        System.out.println(queue.isFull());
         queue.traversalInQueue();
         queue.deQueue();
         queue.deQueue();
         System.out.println("--------------------------------");
-     
+
         // queue.deleteQueue();
         queue.traversalInQueue();
     }

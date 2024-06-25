@@ -17,6 +17,13 @@ public class Queue {
             return false;
         }
     }
+    public boolean isFull() {
+        if (topOfQueue == queueArray.length-1 ) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 
     public void enQueue(int value) {
         if (topOfQueue == queueArray.length - 1) {
