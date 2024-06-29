@@ -8,15 +8,15 @@ class Main {
         queue.enQueue(122);
         queue.enQueue(123);
         queue.enQueue(124);
-       queue.traversInQueue();
-      System.out.println("--------------");
-      System.out.println(queue.deQueue());
-      System.out.println(queue.deQueue());
-      System.out.println(queue.deQueue());
-      System.out.println(queue.deQueue());
+        queue.traversInQueue();
+        System.out.println("--------------");
+        System.out.println(queue.deQueue());
+        System.out.println(queue.deQueue());
+        System.out.println(queue.deQueue());
+        System.out.println(queue.deQueue());
         queue.deleteQueue();
-      System.out.println(queue.isEmpty());
-    
+        System.out.println(queue.isEmpty());
+
     }
 
 }
