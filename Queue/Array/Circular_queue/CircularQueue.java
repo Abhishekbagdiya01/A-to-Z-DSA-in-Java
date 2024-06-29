@@ -73,10 +73,12 @@ public class CircularQueue {
             }
         }
     }
-    public void deleteQueue(){
+
+    public void deleteQueue() {
         queue = null;
         startOfQueue = -1;
         topOfQueue = -1;
         size = -1;
-        System.out.println("Queue is deleted");}
+        System.out.println("Queue is deleted");
+    }
 }
