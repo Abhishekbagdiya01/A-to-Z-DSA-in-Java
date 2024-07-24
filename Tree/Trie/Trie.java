@@ -5,7 +5,7 @@ public class Trie {
       root = new TrieNode();
       System.out.println("The Trie has been created");
    }
-
+   // Insert string in Trie
    public void insert(String word) {
       TrieNode currentNode = root;
       for (int i = 0; i < word.length(); i++) {
@@ -20,6 +20,8 @@ public class Trie {
       currentNode.isEndOfString = true;
       System.out.println("Successfully inserted " + word + " in Trie.");
    }
+
+   //Search string from Trie
    public boolean search(String word){
       TrieNode currentNode = root;
       for (int i = 0; i < word.length(); i++) {
@@ -38,5 +40,41 @@ public class Trie {
       }
       return currentNode.isEndOfString;
    }   
+
+   // Delete a string from Trie
+   private boolean delete(TrieNode parentTrieNode,String word ,int index){
+            char ch = word.charAt(index);
+            TrieNode currentNode = parentTrieNode.children.get(ch);
+            boolean canThisNodeBeDeleted;
+
+            if (currentNode.children.size()>1) {
+              delete(currentNode, word, index+1);
+              return false; 
+            }
+            if (index == word.length()-1) {
+              if (currentNode.children.size()>1) {
+               currentNode.isEndOfString=false;
+               return false;
+              }else{
+               parentTrieNode.children.remove(ch);
+               return true;
+              } 
+            }
+            if (currentNode.isEndOfString==true) {
+               delete(currentNode, word, index+1);
+            }
+            canThisNodeBeDeleted = delete(currentNode, word, index+1);
+            if (canThisNodeBeDeleted) {
+              parentTrieNode.children.remove(ch);
+              return true; 
+            }else{
+               return false;
+            }
+   }
+   public void delete(String word){
+      if (search(word)) {
+         delete(root, word, 0);
+      }
+   }
 }
  
