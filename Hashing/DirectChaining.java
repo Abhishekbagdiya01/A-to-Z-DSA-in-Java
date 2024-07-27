@@ -7,7 +7,7 @@ public class DirectChaining {
         hashTable = new LinkedList[size];
     }
     
-    public int assaciHashFuntion(String word,int m){
+    public int modASCIIHashFuntion(String word,int m){
         char[] ch = word.toCharArray();
         int total=0;
         for (int i = 0; i < ch.length; i++) {
@@ -17,7 +17,7 @@ public class DirectChaining {
     }
 
     public void insertInHashTable(String word){
-        int index = assaciHashFuntion(word,hashTable.length);
+        int index = modASCIIHashFuntion(word,hashTable.length);
         if (hashTable[index]== null) {
            hashTable[index] = new LinkedList<String>();
            hashTable[index].add(word);
@@ -34,5 +34,26 @@ public class DirectChaining {
                 System.out.println("Index "+ i+ ", Key :" +hashTable[i]);
             }
         }
+    }
+    public boolean search(String word){
+        int index = modASCIIHashFuntion(word, hashTable.length);
+        if (hashTable[index] != null && hashTable[index].contains(word)) {
+            System.out.println("\""+ word + "\"" + " founded in Hashtable at index :" + index);
+            return true;
+        }else{
+
+            System.out.println("\""+ word + "\"" + " does not found in Hashtable ");
+            return false;
         }
+    }
+    public void deleteKeyHashTable(String word){
+        int index = modASCIIHashFuntion(word, hashTable.length);
+        boolean result = search(word);
+        if (result == true) {
+            hashTable[index].remove(word);
+            System.out.println("\"" + word + "\"" + " deleted successfully");
+        }else{
+            System.out.println("\""+ word + "\"" + " does not exist in Hashtable ");
+        }
+    }
 }
