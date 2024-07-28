@@ -16,6 +16,12 @@ This repository contains my solutions to a variety of data structure and algorit
    * Linear Queue
    * Circular Queue 
 * Tree
+   * Basic Tree
+   * Binary Tree
+   * Trie
+* Hashing
+   * Direct Chaining
+   * Linear Probing
 
 ## How to use this repository
 
