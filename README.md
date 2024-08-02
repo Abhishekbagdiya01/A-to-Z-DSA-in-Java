@@ -22,9 +22,12 @@ This repository contains my solutions to a variety of data structure and algorit
 * Hashing
    * Direct Chaining
    * Linear Probing
+   * Quadratic Probing
+   * Double Hashing
 * Sorting
    * Bubble Sort 
    * Selection Sort 
+   * Insertion Sort
 
 ## How to use this repository
 
