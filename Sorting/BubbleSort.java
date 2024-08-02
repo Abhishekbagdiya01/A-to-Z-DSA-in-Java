@@ -1,3 +1,12 @@
+
+
+/*
+      When to use Bubble Sort?
+      - When the input is almost sorted
+      When to avoid Bubble Sort?
+      - Average time complexity is poor
+*/
+
 public class BubbleSort {
   public static void bubbleSort(int[] nums){
     int n = nums.length;
