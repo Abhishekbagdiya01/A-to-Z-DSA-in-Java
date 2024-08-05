@@ -28,6 +28,9 @@ This repository contains my solutions to a variety of data structure and algorit
    * Bubble Sort 
    * Selection Sort 
    * Insertion Sort
+   * Bucket Sort
+   * Merge Sort
+   * Quick Sort
 
 ## How to use this repository
 
