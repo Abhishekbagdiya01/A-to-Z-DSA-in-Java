@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-
 public class Graph {
   ArrayList<GraphNode> nodeList = new ArrayList<GraphNode>();
   int[][] adjacencyMatrix;
