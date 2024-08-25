@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+
 public class Main {
   public static void main(String[] args) {
     ArrayList<GraphNode> nodeList = new ArrayList<GraphNode>();
@@ -17,6 +18,7 @@ public class Main {
     graph.addUndirectedEdge(3, 4);
 
     System.out.println(graph.toString());
+    graph.bfs();
   }
 
 }
