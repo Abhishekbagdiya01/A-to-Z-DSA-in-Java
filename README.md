@@ -31,6 +31,7 @@ This repository contains my solutions to a variety of data structure and algorit
    * Bucket Sort
    * Merge Sort
    * Quick Sort
+* Graph
 
 ## How to use this repository
 
