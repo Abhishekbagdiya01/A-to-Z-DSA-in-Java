@@ -18,7 +18,10 @@ public class Main {
     graph.addUndirectedEdge(3, 4);
 
     System.out.println(graph.toString());
+    System.out.println("GFS : ");
     graph.bfs();
+    System.out.println("DFS : ");
+    graph.dfs();
   }
 
 }

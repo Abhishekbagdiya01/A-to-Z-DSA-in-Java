@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.Stack;
 
 public class Graph {
   ArrayList<GraphNode> nodeList = new ArrayList<GraphNode>();
@@ -48,7 +49,7 @@ public class Graph {
     return neighbors;
   }
 
-  void bfsVisit(GraphNode graphNode) {
+  private void bfsVisit(GraphNode graphNode) {
     LinkedList<GraphNode> queue = new LinkedList<>();
     queue.add(graphNode);
 
@@ -70,6 +71,34 @@ public class Graph {
     for (GraphNode graphNode : nodeList) {
       if (!graphNode.isVisited) {
         bfsVisit(graphNode);
+      }
+    }
+  }
+
+  private void dfsVisit(GraphNode graphNode) {
+    Stack<GraphNode> stack = new Stack<>();
+    stack.push(graphNode);
+
+    while (!stack.isEmpty()) {
+      GraphNode currentNode = stack.pop();
+      currentNode.isVisited = true;
+      System.out.print(currentNode.name + " ");
+      ArrayList<GraphNode> neighbors = getNeighbors(graphNode);
+      for (GraphNode neighbor : neighbors) {
+
+        if (!neighbor.isVisited) {
+          stack.push(neighbor);
+          neighbor.isVisited = true;
+        }
+      }
+    }
+  }
+
+  // DFS
+  public void dfs() {
+    for (GraphNode graphNode : nodeList) {
+      if (!graphNode.isVisited) {
+        dfsVisit(graphNode);
       }
     }
   }
