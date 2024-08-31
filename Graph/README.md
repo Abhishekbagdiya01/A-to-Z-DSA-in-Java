@@ -1,5 +1,5 @@
 # GRAPH
-Graph Data Structure
+## Graph Data Structure
 A graph is a non-linear data structure that consists of a set of nodes (or vertices) connected by edges. Each node represents an object, and each edge represents a connection between two objects.
 
 ## Key Components:
