@@ -29,12 +29,13 @@ A **Binary Tree** is a hierarchical data structure in which each node has at mos
 ## Example
 
 Here’s an example of a binary tree:
-
+```
     1
    / \
   2   3
  / \
 4   5
+```
 
 - **Root:** `1`
 - **Left Child of 1:** `2`
