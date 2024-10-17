@@ -20,7 +20,6 @@ public class Main {
     BinaryNode n9 = new BinaryNode();
     n9.value = "N9";
 
-
     n1.leftChild = n2;
     n1.rightChild = n3;
 
@@ -34,7 +33,8 @@ public class Main {
     n4.rightChild = n9;
 
     binaryTree.root = n1;
-    binaryTree.preOrder(binaryTree.root);
+    // binaryTree.preOrder(binaryTree.root);
+    binaryTree.inOrder(binaryTree.root);
 
   }
 }
