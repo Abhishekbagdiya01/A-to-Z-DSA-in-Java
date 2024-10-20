@@ -55,4 +55,24 @@ public class BinaryTreeLL {
     }
     System.out.println();
   }
+
+  boolean search(String value) {
+    Queue<BinaryNode> queue = new LinkedList<>();
+    queue.add(root);
+    while (!queue.isEmpty()) {
+      BinaryNode node = queue.remove();
+      if (node.value == value) {
+        return true;
+      } else {
+        if (node.leftChild != null) {
+          queue.add(node.leftChild);
+        }
+        if (node.rightChild != null) {
+          queue.add(node.rightChild);
+        }
+
+      }
+    }
+    return false;
+  }
 }
