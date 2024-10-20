@@ -33,8 +33,16 @@ public class Main {
     n4.rightChild = n9;
 
     binaryTree.root = n1;
-    // binaryTree.preOrder(binaryTree.root);
+    System.out.println("Pre-Order Traversal");
+    binaryTree.preOrder(binaryTree.root);
+    System.out.println();
+    System.out.println("In-Order Traversal");
     binaryTree.inOrder(binaryTree.root);
-
+    System.out.println();
+    System.out.println("Post-Order Traversal");
+    binaryTree.postOrder(binaryTree.root);
+    System.out.println();
+    System.out.println("Level Order Traversal");
+    binaryTree.levelOrder();
   }
 }

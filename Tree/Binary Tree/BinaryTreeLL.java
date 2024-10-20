@@ -1,3 +1,6 @@
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class BinaryTreeLL {
   BinaryNode root;
 
@@ -23,5 +26,33 @@ public class BinaryTreeLL {
     inOrder(node.leftChild);
     System.out.print(node.value + " ");
     inOrder(node.rightChild);
+  }
+
+  // Post-Order Traversal
+  void postOrder(BinaryNode node) {
+    if (node == null) {
+      return;
+    }
+    postOrder(node.leftChild);
+    postOrder(node.rightChild);
+    System.out.print(node.value + " ");
+  }
+
+  // Level-Order Traversal
+  void levelOrder() {
+    Queue<BinaryNode> queue = new LinkedList<>();
+    queue.add(root);
+
+    while (!queue.isEmpty()) {
+      BinaryNode node = queue.remove();
+      System.out.print(node.value + " ");
+      if (node.leftChild != null) {
+        queue.add(node.leftChild);
+      }
+      if (node.rightChild != null) {
+        queue.add(node.rightChild);
+      }
+    }
+    System.out.println();
   }
 }
