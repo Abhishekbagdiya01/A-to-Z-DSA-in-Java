@@ -76,6 +76,7 @@ public class BinaryTreeLL {
     return false;
   }
 
+  // Insert in Binary Tree
   void insert(String value) {
     BinaryNode newNode = new BinaryNode();
     newNode.value = value;
@@ -101,6 +102,67 @@ public class BinaryTreeLL {
         queue.add(node.rightChild);
       }
     }
+  }
 
+  // Depest Node in Binary Tree
+  public BinaryNode getDeepestNode() {
+    Queue<BinaryNode> queue = new LinkedList<>();
+    queue.add(root);
+    BinaryNode node = null;
+    while (!queue.isEmpty()) {
+      node = queue.remove();
+      if (node.leftChild != null) {
+        queue.add(node.leftChild);
+      }
+      if (node.rightChild != null) {
+        queue.add(node.rightChild);
+      }
+    }
+    return node;
+  }
+
+  // delete deepest node
+  public void deleteDeepestNode() {
+    Queue<BinaryNode> queue = new LinkedList<>();
+    queue.add(root);
+    BinaryNode currentNode, prevNode = null;
+
+    while (!queue.isEmpty()) {
+      currentNode = queue.remove();
+      if (currentNode.leftChild == null) {
+        currentNode.rightChild = null;
+        return;
+      }
+      if (currentNode.rightChild == null) {
+        currentNode.leftChild = null;
+        return;
+      }
+      queue.add(currentNode.leftChild);
+      queue.add(currentNode.rightChild);
+
+    }
+  }
+
+  // Delete Node
+  public void deleteNode(String value) {
+    Queue<BinaryNode> queue = new LinkedList<BinaryNode>();
+    queue.add(root);
+    while (!queue.isEmpty()) {
+      BinaryNode node = queue.remove();
+      if (node.value == value) {
+        node.value = getDeepestNode().value;
+        deleteDeepestNode();
+        System.out.println("The node is deleted");
+        return;
+      } else {
+        if (node.leftChild != null) {
+          queue.add(node.leftChild);
+        }
+        if (node.leftChild != null) {
+          queue.add(node.rightChild);
+        }
+      }
+    }
+  System.out.println("The node does not exist in BT");
   }
 }

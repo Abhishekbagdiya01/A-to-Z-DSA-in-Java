@@ -23,5 +23,10 @@ public class Main {
     System.out.println("Level Order Traversal");
     binaryTree.levelOrder();
     System.out.println(binaryTree.search("N6"));
+    
+     binaryTree.deleteNode("N6");
+   
+    binaryTree.levelOrder();
+    
   }
 }
