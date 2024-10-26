@@ -25,8 +25,8 @@ public class Main {
     System.out.println(binaryTree.search("N6"));
     
      binaryTree.deleteNode("N6");
-   
-    binaryTree.levelOrder();
+  binaryTree.deleteBT(); 
+    
     
   }
 }
