@@ -85,4 +85,15 @@ public class BinaryTreeArray {
       System.out.println(value + " doesn't exist in the Binary Tree");
     }
   }
+
+  // Delete whole Binary Tree
+  void deleteBT(){
+    try {
+      
+    arr = null;
+    System.out.println("The Binary Tree has been successfully deleted");
+    } catch (Exception e) {
+    System.out.println("Something went wrong");
+    }
+  }
 }

@@ -53,6 +53,7 @@ public class Main {
     bTArray.levelOrder();
     bTArray.search("N4");
     bTArray.delete("N4");
-    bTArray.levelOrder();
+    bTArray.deleteBT();
+    // bTArray.levelOrder();
   }
 }
