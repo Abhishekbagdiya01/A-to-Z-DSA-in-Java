@@ -22,7 +22,7 @@ public class BinaryTreeArray {
     if (!isFull()) {
      arr[lastUsedIndex+1] = value;
      lastUsedIndex++;
-     System.out.println("The value of " + value + "inserted in Binary Tree"); 
+     System.out.println("The value of " + value + " inserted in Binary Tree"); 
     }
     else{
       System.out.println("The Binary Tree is full");
@@ -61,5 +61,18 @@ public class BinaryTreeArray {
     for (int i = 1 ; i<arr.length;i++) {
       System.out.print(arr[i] +" ");
     }
+    System.out.println();
   }
+  // Search method
+  int search(String value){
+    for (int i = 1 ; i<arr.length;i++) {
+      if (arr[i] == value) {
+        System.out.println(value + " exist in the Binary Tree at index "+i);
+       return i;    
+      }
+    }
+    System.out.println(value + " doesn't exist in the Binary Tree");
+    return -1;
+  }
+
 }

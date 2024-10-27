@@ -51,5 +51,6 @@ public class Main {
     bTArray.postOrder(1);
     System.out.println("Level-Order Traversal");
     bTArray.levelOrder();
+    bTArray.search("N4");
   }
 }
