@@ -56,4 +56,10 @@ public class BinaryTreeArray {
     postOrder(index *2 + 1);
     System.out.print(arr[index]+ " ");
   }
+  // Level-Order Traversal
+  void levelOrder(){
+    for (int i = 1 ; i<arr.length;i++) {
+      System.out.print(arr[i] +" ");
+    }
+  }
 }

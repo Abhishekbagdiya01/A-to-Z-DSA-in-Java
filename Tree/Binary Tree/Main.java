@@ -49,5 +49,7 @@ public class Main {
     System.out.println();
      System.out.println("Post-Order Traversal");
     bTArray.postOrder(1);
+    System.out.println("Level-Order Traversal");
+    bTArray.levelOrder();
   }
 }
