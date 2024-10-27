@@ -74,5 +74,15 @@ public class BinaryTreeArray {
     System.out.println(value + " doesn't exist in the Binary Tree");
     return -1;
   }
-
+  // Delete node method
+  void delete(String value){
+    int index = search(value);
+    if (index != -1) {
+      arr[index] = arr[lastUsedIndex];
+      lastUsedIndex--;
+      System.out.println("The node deleted successfully");
+    }else{
+      System.out.println(value + " doesn't exist in the Binary Tree");
+    }
+  }
 }

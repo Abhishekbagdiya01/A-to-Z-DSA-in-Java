@@ -52,5 +52,7 @@ public class Main {
     System.out.println("Level-Order Traversal");
     bTArray.levelOrder();
     bTArray.search("N4");
+    bTArray.delete("N4");
+    bTArray.levelOrder();
   }
 }
