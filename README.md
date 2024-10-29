@@ -18,6 +18,7 @@ This repository contains my solutions to a variety of data structure and algorit
 * Tree
    * Basic Tree
    * Binary Tree
+   * Binary Search Tree
    * Trie
 * Hashing
    * Direct Chaining
