@@ -1,3 +1,6 @@
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class BinarySearchTree {
   BinaryNode root;
 
@@ -47,5 +50,19 @@ public class BinarySearchTree {
     postOrderTraversal(node.left);
     postOrderTraversal(node.right);
     System.out.print(node.value + " ");
+  }
+
+  void levelOrderTraversal(BinaryNode node) {
+    Queue<BinaryNode> queue = new LinkedList<>();
+    queue.offer(node);
+    while (!queue.isEmpty()) {
+      BinaryNode tempNode = queue.poll();
+      System.out.print(tempNode.value + " ");
+
+      if (tempNode.left != null)
+        queue.offer(tempNode.left);
+      if (tempNode.right != null)
+        queue.offer(tempNode.right);
+    }
   }
 }

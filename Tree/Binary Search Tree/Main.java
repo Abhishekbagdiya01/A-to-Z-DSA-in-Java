@@ -22,5 +22,9 @@ public class Main {
     System.out.println("PostOrder Traversal");
     bST.postOrderTraversal(bST.root);
     System.out.println();
+    // Level Order Traversal BFS
+    System.out.println("LevelOrder Traversal");
+    bST.levelOrderTraversal(bST.root);
+    System.out.println();
   }
 }
