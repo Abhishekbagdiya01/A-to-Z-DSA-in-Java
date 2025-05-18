@@ -1,13 +1,26 @@
 public class Main {
-    public static void main(String[] args) {
-        BinarySearchTree bST = new BinarySearchTree();
-        bST.Insert(70);
-        bST.Insert(50);
-        bST.Insert(90);
-        bST.Insert(30);
-        bST.Insert(60);
-        bST.Insert(100);
-        bST.Insert(20);
-        bST.Insert(40);
-    }
+  public static void main(String[] args) {
+    BinarySearchTree bST = new BinarySearchTree();
+    bST.insert(70);
+    bST.insert(50);
+    bST.insert(90);
+    bST.insert(30);
+    bST.insert(60);
+    bST.insert(100);
+    bST.insert(20);
+    bST.insert(40);
+
+    // In Order Traversal
+    System.out.println("InOrder Traversal");
+    bST.inOrderTraversal(bST.root);
+    System.out.println();
+    // Pre Order Traversal
+    System.out.println("PreOrder Traversal");
+    bST.preOrderTraversal(bST.root);
+    System.out.println();
+    // Post Order Traversal
+    System.out.println("PostOrder Traversal");
+    bST.postOrderTraversal(bST.root);
+    System.out.println();
+  }
 }
