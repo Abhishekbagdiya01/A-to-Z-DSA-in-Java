@@ -26,5 +26,17 @@ public class Main {
     System.out.println("LevelOrder Traversal");
     bST.levelOrderTraversal(bST.root);
     System.out.println();
+
+    // Searching in bST
+    System.out.println("Searching value : " + bST.search(55));
+
+    // Deleting Node
+    System.out.println("Deleting Node");
+    bST.deleteNode(bST.root, 70);
+    bST.inOrderTraversal(bST.root);
+    System.out.println();
+
+    // Deleting the whole bST
+    bST.deleteBST();
   }
 }
